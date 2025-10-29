@@ -1,0 +1,252 @@
+/* Prism.js 코드 하이라이팅 테마 - GitHub 스타일 */
+/* 라이트 모드 */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #24292e;
+  background: #f6f8fa;
+  text-shadow: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* 다크 모드 */
+[data-theme="dark"] code[class*="language-"],
+[data-theme="dark"] pre[class*="language-"] {
+  color: #e1e4e8;
+  background: #2d3748;
+}
+
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+[data-theme="dark"] pre[class*="language-"] {
+  border-color: #4a5568;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a737d;
+}
+
+[data-theme="dark"] .token.comment,
+[data-theme="dark"] .token.prolog,
+[data-theme="dark"] .token.doctype,
+[data-theme="dark"] .token.cdata {
+  color: #8b949e;
+}
+
+.token.punctuation {
+  color: #24292e;
+}
+
+[data-theme="dark"] .token.punctuation {
+  color: #e1e4e8;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #005cc5;
+}
+
+[data-theme="dark"] .token.property,
+[data-theme="dark"] .token.tag,
+[data-theme="dark"] .token.constant,
+[data-theme="dark"] .token.symbol,
+[data-theme="dark"] .token.deleted {
+  color: #79c0ff;
+}
+
+.token.boolean,
+.token.number {
+  color: #005cc5;
+}
+
+[data-theme="dark"] .token.boolean,
+[data-theme="dark"] .token.number {
+  color: #79c0ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #032f62;
+}
+
+[data-theme="dark"] .token.selector,
+[data-theme="dark"] .token.attr-name,
+[data-theme="dark"] .token.string,
+[data-theme="dark"] .token.char,
+[data-theme="dark"] .token.builtin,
+[data-theme="dark"] .token.inserted {
+  color: #9ecbff;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.string,
+.token.variable {
+  color: #d73a49;
+}
+
+[data-theme="dark"] .token.operator,
+[data-theme="dark"] .token.entity,
+[data-theme="dark"] .token.url,
+[data-theme="dark"] .token.string,
+[data-theme="dark"] .token.variable {
+  color: #ffa198;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #6f42c1;
+}
+
+[data-theme="dark"] .token.atrule,
+[data-theme="dark"] .token.attr-value,
+[data-theme="dark"] .token.function,
+[data-theme="dark"] .token.class-name {
+  color: #d2a8ff;
+}
+
+.token.keyword {
+  color: #d73a49;
+}
+
+[data-theme="dark"] .token.keyword {
+  color: #ff7b72;
+}
+
+.token.regex,
+.token.important {
+  color: #e36209;
+}
+
+[data-theme="dark"] .token.regex,
+[data-theme="dark"] .token.important {
+  color: #f85149;
+}
+
+/* 라인 하이라이트 */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+[data-theme="dark"] .line-highlight {
+  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 70%,
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0.2em 0.5em;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #586069;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 8px;
+  text-shadow: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .line-highlight:before,
+[data-theme="dark"] .line-highlight[data-end]:after {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #b3b9c5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+
+/* 커맨드 라인 */
+.command-line-prompt > span:before {
+  color: #586069;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
+}
+
+[data-theme="dark"] .command-line-prompt > span:before {
+  color: #b3b9c5;
+}
+
+/* 콘솔 로그: Prism CSS 로드 완료 */
+.prism-loaded::after {
+  content: "✅ Prism CSS 로드 완료";
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.7;
+}

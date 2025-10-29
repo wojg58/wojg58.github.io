@@ -1,0 +1,29 @@
+[
+  {
+    "file": "react-tutorial.md",
+    "title": "React 컴포넌트 기초 튜토리얼",
+    "date": "2025-01-27",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend",
+      "Tutorial"
+    ],
+    "category": "Frontend",
+    "description": "React에서 컴포넌트를 만드는 기본적인 방법을 배워보세요.",
+    "excerpt": "React는  라이브러리로, UI를 작은 재사용 가능한 조각들로 나누어 개발할 수 있습니다. 이번 튜토리얼에서는 React 컴포넌트의 기본 개념과 실전 예제를 살펴보겠습니다.\r \r \r \r 1. (\r 2. (\r 3. (\r 4. (\r 5. (\r \r \r \r 컴포넌트(Component)는 입니다. 버튼, 입력창, 카드 등 모든 UI 요소를 컴포넌트로 만들 수 있습..."
+  },
+  {
+    "file": "example.md",
+    "title": "첫 번째 블로그 게시글",
+    "date": "2025-01-26",
+    "tags": [
+      "JavaScript",
+      "Web",
+      "Tutorial"
+    ],
+    "category": "Development",
+    "description": "GitHub Pages로 만든 정적 블로그의 첫 번째 게시글입니다.",
+    "excerpt": "이것은 로 만든 정적 블로그의 첫 번째 게시글입니다. 마크다운 형식으로 작성할 수 있으며, 코드 하이라이팅과 다양한 기능들을 지원합니다.\r \r \r \r \r \r JavaScript 코드를 예쁘게 표시할 수 있습니다:\r \r \r \r \r \r - ✅ 완료된 작업\r - 🔄 진행 중인 작업\r - ❌ 아직 하지 않은 작업\r \r \r \r 변수 `userName`이나 함수 `..."
+  }
+]
