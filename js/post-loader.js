@@ -181,31 +181,37 @@ class PostLoader {
       return;
     }
 
+    // 기존 Giscus 스크립트 제거
+    const existingScript = giscusContainer.querySelector(
+      'script[src*="giscus.app"]'
+    );
+    if (existingScript) {
+      existingScript.remove();
+    }
+
     // Giscus 스크립트 생성
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
     script.async = true;
     script.crossOrigin = "anonymous";
 
-    // Giscus 설정
-    script.setAttribute(
-      "data-repo",
-      "your-github-username/your-github-username.github.io"
-    ); // TODO: 실제 저장소로 변경
-    script.setAttribute("data-repo-id", "YOUR_REPO_ID"); // TODO: 실제 값으로 변경
+    // Giscus 설정 - 각 게시글별로 고유한 댓글을 위해 pathname 사용
+    script.setAttribute("data-repo", "wojg58/wojg58.github.io");
+    script.setAttribute("data-repo-id", "R_kgDOQLHKxw");
     script.setAttribute("data-category", "General");
-    script.setAttribute("data-category-id", "YOUR_CATEGORY_ID"); // TODO: 실제 값으로 변경
+    script.setAttribute("data-category-id", "DIC_kwDOQLHKx84CxMax");
     script.setAttribute("data-mapping", "pathname");
     script.setAttribute("data-strict", "0");
     script.setAttribute("data-reactions-enabled", "1");
-    script.setAttribute("data-emit-metadata", "1");
+    script.setAttribute("data-emit-metadata", "0");
     script.setAttribute("data-input-position", "bottom");
     script.setAttribute("data-theme", "preferred_color_scheme");
     script.setAttribute("data-lang", "ko");
+    script.setAttribute("data-loading", "lazy");
 
     // 스크립트 로드 완료 이벤트
     script.onload = () => {
-      console.log("📄 Giscus 스크립트 로드 완료");
+      console.log(`📄 Giscus 스크립트 로드 완료 - ${fileName}`);
     };
 
     script.onerror = () => {
@@ -216,7 +222,7 @@ class PostLoader {
 
     // 스크립트 추가
     giscusContainer.appendChild(script);
-    console.log("📄 Giscus 로드 시작");
+    console.log(`📄 Giscus 로드 시작 - ${fileName}`);
   }
 
   // 날짜 포맷팅
